@@ -1,0 +1,180 @@
+
+
+Technical dependencies and Installation Process:
+
+
+
+
+
+The script to install all the dependencies with a single command has already been uploaded on the bitBucket repository of auto-transcript. It creates a node-module folder for your local repository and all the packages essential for this project are installed. 
+
+Prerequisite: Node should be installed on your system. The command for 
+
+installing node on Ubuntu (server OS) are given below:
+
+sudo apt install nodejs
+
+Direct to project-app folder in repo:
+
+cd  Autotranscript/project-app
+
+Run the command. Make sure that package.json file is present in project-app folder:
+
+ npm -i
+
+
+
+
+
+
+
+
+ 
+1.      Front End :
+
+
+
+
+Name
+
+Version
+Angular CLI
+ 7.2.11
+Html
+ html5
+Bootstrap
+ 7.5.1
+ CSS
+ 
+ Angular material
+ 7.3.7
+ Material design bootstrap (mdb)
+ 4.8.0
+ 
+
+Installation direction:
+
+Install Angular CLI:
+
+npm install -g @angular/cli
+
+Install Bootstrap
+npm install bootstrap --save
+
+
+
+ 
+2.      Speech Engine:
+
+Name
+Service provider
+ Web speech engine
+ Mozilla firefox
+ 
+ 
+
+3.      Backend:
+
+Name
+Version
+Node
+ v10.15.3
+Python
+ 3.6
+Javascript
+ 
+ 
+Installation direction
+
+sudo apt install nodejs
+
+
+Check whether the node is installed with proper version:
+
+node -v
+npm -v
+
+
+
+ 
+4.      Keyword Extractor:
+
+Name
+Version
+ python
+3.6
+ Gensim
+ 
+ 
+ 
+ 
+
+
+installing direction
+
+
+Install gensim
+
+pip3 install gensim
+pip3 install nltk
+
+
+
+
+
+
+5. Database
+
+Name
+Version
+MongoDB
+4.0.9
+PyMongo
+
+
+Mangoose
+
+
+
+Installation direction:
+
+
+Mongodb:       
+
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+
+
+import the MongoDB public GPG key
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+Create a source list file for MongoDB
+echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
+
+Update the local package repository
+sudo apt-get update
+Install the latest stable version of MongoDB:
+sudo apt-get install -y mongodb-org
+ 
+ 
+Launch MongoDB as a service on Ubuntu 16.04
+mongod --fork --logpath “logfile.txt” --logappend
+Install pymongo:
+pip install pymongo
+Install Mangoose:
+npm install Mongoose
+
+ 
+ 
+
+ 
+
+
+ 
+
+
+
+Known issues/bottlenecks:
+WebSpeechAPI does not take audio files as an input.
+The audio upload button would require to play the audio file to be transcribed and then be summarized.
+A valid trusted certificate will be essential to run the application as Google Chrome does not allow microphone access to insecure websites.
+
+ 
